@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Restaurante</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Sistema de Gerenciamento de Restaurante</h1>
+    
+    <section id="pedido-section">
+        <h2>Registro de Pedidos</h2>
+        <form id="pedido-form">
+            <label for="garcom">Garçom:</label>
+            <select id="garcom" required>
+                <option value="Garçom 1">Garçom 1</option>
+                <option value="Garçom 2">Garçom 2</option>
+                <option value="Garçom 3">Garçom 3</option>
+                <option value="Garçom 4">Garçom 4</option>
+                <option value="Garçom 5">Garçom 5</option>
+                <option value="Garçom 6">Garçom 6</option>
+                <option value="Garçom 7">Garçom 7</option>
+
+            </select>
+
+            <label for="item">Item:</label>
+            <select id="item" required>
+                <option value="Prato 1">Prato 1</option>
+                <option value="Prato 2">Prato 2</option>
+                <option value="Prato 3">Prato 3</option>
+                <option value="Prato 4">Prato 4</option>
+                <option value="Prato 5">Prato 5</option>
+                <option value="Prato 6">Prato 6</option>
+                <option value="Prato 7">Prato 7</option>
+            </select>
+
+            <label for="quantidade">Quantidade:</label>
+            <div id="quantidade-container">
+                <button type="button" onclick="ajustarQuantidade(-1)">-</button>
+                <span id="quantidade">1</span>
+                <button type="button" id="quantidade-plus" onclick="ajustarQuantidade(1)">+</button>
+            </div>
+
+            <button type="submit">Registrar Pedido</button>
+        </form>
+        <h2>Pedidos Registrados</h2>
+        <ul id="pedidos-list"></ul>
+    </section>
+
+    <section id="conta-section">
+        <h2>Calcular Conta</h2>
+        <p>Total: <span id="total-conta">R$ 0,00</span></p>
+        <button id="calcular-conta">Calcular Conta</button>
+    </section>
+
+    <section id="pagamento-section">
+        <h2>Pagamento</h2>
+        <label for="metodo-pagamento">Método de Pagamento:</label>
+        <select id="metodo-pagamento">
+            <option value="credito">Cartão de Crédito</option>
+            <option value="debito">Cartão de Débito</option>
+        </select>
+        <button id="processar-pagamento">Processar Pagamento</button>
+        <p id="mensagem-pagamento" aria-live="polite"></p>
+    </section>
+
+    <section id="relatorios-section">
+        <h2>Relatório de Vendas do Dia</h2>
+        <button id="gerar-relatorio-diario">Gerar Relatório do Dia</button>
+        <div id="relatorio-result"></div>
+        <button id="zerar-relatorio">Zerar Relatório Diário</button>
+        <button onclick="exportarBackup()">Exportar Backup</button>
+        <input id="botao-backup" type="file" onchange="importarBackup(event)" />
+        <div id="notas-fiscais"></div>
+    </section>
+
+    <script src="../js/app.js"></script>
+    <script src="../js/payment.js"></script>
+</body>
+</html>

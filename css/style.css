@@ -1,0 +1,207 @@
+/* Base styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #f0f2f5, #e6ebf0);
+    color: #333;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    color: #4CAF50;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #333;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 5px;
+}
+
+/* Main sections styling */
+section {
+    width: 90%;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    background: #ffffff;
+    max-width: 600px;
+}
+
+form label {
+    font-weight: 600;
+    color: #555;
+}
+
+input, button, select {
+    width: 100%;
+    margin: 8px 0;
+    padding: 12px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: #4CAF50;
+}
+
+button {
+    background-color: #4CAF50;
+    color: #ffffff;
+    border: none;
+    font-size: 1.1em;
+    transition: 0.3s;
+    font-weight: 600;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background: #f8f9fa;
+    padding: 12px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+ul li:hover {
+    background: #e9ecef;
+}
+
+/* Quantidade container */
+#quantidade-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#quantidade-container button {
+    width: 30px;
+    height: 30px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#quantidade-container span {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Success message styling */
+#mensagem-pagamento {
+    background: #d4edda;
+    border-radius: 5px;
+    color: #155724;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+.mostrar-mensagem {
+    display: block;
+    padding: 10px;
+}
+
+/* Report styling */
+#relatorio-result {
+    font-size: 1em;
+    background: #f9f9f9;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    color: #333;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#relatorio-result:hover {
+    background-color: #e2e3e5;
+    color: #333;
+}
+
+#zerar-relatorio {
+    width: 150px;
+    padding: 8px;
+    background-color: #e53935; /* Red color */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-weight: 600;
+    text-align: center;
+    transition: 0.3s;
+    margin: auto    ;
+}
+
+#relatorios-section{
+    display: flex;
+    flex-direction: column;
+}
+
+#zerar-relatorio:hover {
+    background-color: #d32f2f;
+    transform: scale(1.05);
+}
+
+/* Login page styling */
+#login-section {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#login-section h2 {
+    text-align: center;
+}
+
+.botao-backup {
+    width: 100%;
+    margin: 8px 0;
+    padding: 12px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s;
+    cursor: pointer;
+}
+
+.botao-backup:hover {
+    background-color: #45a049; /* Verde mais escuro ao passar o mouse */
+}
+
+.botao-backup:active {
+    background-color: #3e8e41; /* Cor um pouco mais escura quando pressionado */
+}
+
+
